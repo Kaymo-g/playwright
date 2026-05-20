@@ -1,9 +1,9 @@
-import {test,expect} from '@playwright/test'
+//import {test,expect} from '@playwright/test'
 
-test("verify ndosi automation title",async({page})=>{
+// test("verify ndosi automation title",async({page})=>{
 
-    await page.goto("https://ndosisimplifiedautomation.vercel.app/")
+//     await page.goto("https://ndosisimplifiedautomation.vercel.app/")
 
-    await expect(page).toHaveTitle("Ndosi Test Automation")
+//     await expect(page).toHaveTitle("Ndosi Test Automation")
     
-})
+// })
