@@ -12,3 +12,5 @@ export const test = base.extend<CustomFixtures>({
         await use(loginPage);
     }
 })
+
+export {expect} from '@playwright/test'
