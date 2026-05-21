@@ -5,8 +5,8 @@ export interface UserLoginData {
 
 export const validUserLoginData: Record<string, UserLoginData> = {
     adminUser: {
-        email: "Kamo10@gmail.com",
-        password: "Kamo@2026"
+        email: "admin@gmail.com",
+        password: "@123456789"
     },
 
     studentUser: {

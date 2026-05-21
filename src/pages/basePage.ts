@@ -12,17 +12,17 @@ export class basePage {
     }
 
     async clickElement(locator: Locator){
-        console.log(`Clicking on locator: ${locator}`);
+        console.log(`Clicking on element: ${locator}`);
         await locator.click();
     }
 
     async enterText(locator: Locator, text: string){
-        console.log(`Entering text: "${text}" into locator: ${locator}`);
+        console.log(`Entering text: "${text}" into element: ${locator}`);
         await locator.fill(text);
     }
 
     async verifyElementVisible(locator: Locator){
-        console.log(`Verifying visibility of locator: ${locator}is visible`);
+        console.log(`Verifying element is visible: ${locator}`);
         await expect(locator).toBeVisible();
     }
 }
