@@ -30,7 +30,9 @@ export class LoginPage extends basePage {
         await this.enterText(this.emailInput, email);
         await this.enterText(this.passwordInput, password);
         await this.clickElement(this.loginButton);
-        await this.page.pause();
+       // await this.page.waitForURL('https://ndosisimplifiedautomation.vercel.app/dashboard');
+        await this.page.waitForLoadState('networkidle');
+
     }
 
 }  
