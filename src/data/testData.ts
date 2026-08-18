@@ -1,16 +1,19 @@
-export interface UserLoginData {
-  email: string;
-  password: string;
-}
+import { test, expect } from '@playwright/test';
+const BASE_URL = 'https://ndosisimplifiedautomation.vercel.app/#practice';
 
-export const validUserLoginData: Record<string, UserLoginData> = {
-    adminUser: {
-        email: "Kamo10@gmail.com",
-        password: "Kamo@2026"
-    },
+const ADMIN = {
+    email: "Kamo10@gmail.com",
+    password: "Kamo@2026",
+};
 
-    studentUser: {
-        email: "Kamo10@gmail.com",
-        password: "Kamo@2026"
-    }
+const STUDENT = {
+    email: "Kamo10@gmail.com",
+    password: "Kamo@2026",
+};
+
+const COURSE_NAME = 'Testing Course';
+
+export const validUserLoginData = {
+    adminUser: ADMIN,
+    studentUser: STUDENT,
 };
