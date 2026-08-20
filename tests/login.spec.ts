@@ -78,7 +78,12 @@ test('Admin enrolls student into Testing Course and student validates enrollment
 
   // ── STEP 2: Navigate to Admin Panel ───────────────────────────────────────
   await test.step('Navigate to Admin Panel', async () => {
-    await page.getByRole('link', { name: /admin panel|admin/i }).click();
+    await page.getByText('Menu', { exact: true }).click();
+    await page.locator('span').filter({ hasText: '🔧 Admin Panel' }).last().click();
+   // await page.getByRole('button', { name: '🔧Admin Panel' }).click();
+   // await page.getByText('Admin Panel', { exact: true }).click();
+   // await page.locator(':text("🔧")')
+   // await page.getByRole('link', { name: /Admin Panel/i }).click();
     await page.waitForLoadState('networkidle');
 
     // Confirm admin panel loaded
