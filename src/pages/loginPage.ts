@@ -1,4 +1,4 @@
-import { Page, Locator} from "@playwright/test";
+/*import { Page, Locator} from "@playwright/test";
 import { basePage } from "./basePage";
 
 export class LoginPage extends basePage {
@@ -35,4 +35,19 @@ export class LoginPage extends basePage {
 
     }
 
-}  
+}*/
+import { Page } from '@playwright/test';
+
+const BASE_URL = 'https://ndosisimplifiedautomation.vercel.app/';
+
+async function login(
+    page: Page,
+    { email, password }: { email: string; password: string }
+) {
+    await page.goto(BASE_URL);
+    await page.getByRole('button', { name: 'Login' }).click();
+    await page.getByPlaceholder('Email').fill(email);
+    await page.getByPlaceholder('Password').fill(password);
+    await page.getByRole('button', { name: 'Login' }).click();
+    await page.waitForLoadState('networkidle');
+}

@@ -1,5 +1,5 @@
 //fixtures
-import {test as base} from '@playwright/test'
+/*import {test as base} from '@playwright/test'
 import {LoginPage} from '../pages/loginPage';
 
 type CustomFixtures = {
@@ -13,4 +13,4 @@ export const test = base.extend<CustomFixtures>({
     }
 })
 
-export {expect} from '@playwright/test'
+export {expect} from '@playwright/test'*/
